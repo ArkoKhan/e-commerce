@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+header {
+  padding-bottom: 140px;
+}
+
+/* ========================= Navigation Start =========================== */
+nav {
+  background-color: rgb(250, 250, 250);
+  position: fixed;
+  width: 100%;
+  margin-top: 0;
+}
+.barnd {
+  font-size: 25px;
+  font-family: "Jost", sans-serif;
+  padding: 34px 21px;
+}
+.barnd span {
+  font-weight: 700;
+  color: #db3735;
+}
+.barnd a {
+  text-decoration: none;
+  color: #430505;
+}
+
+nav ul {
+  display: inline-block;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  padding: 34px 21px;
+  text-transform: capitalize;
+}
+
+.navigation .nav-link {
+  color: #141517;
+  transition: all ease 0.5s;
+}
+
+.navigation .nav-link:hover {
+  color: #ff1f20;
+}
+
+.btns ul {
+  display: inline-block;
+  list-style: none;
+}
+.btns ul li {
+  list-style: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  padding: 34px 21px;
+  text-transform: capitalize;
+}
+
+.btn {
+  color: #ffffff;
+  transition: all ease 0.5s;
+}
+
+.btn:hover {
+  color: #ffffff;
+  -webkit-box-shadow: 2px 3px 18px -6px rgba(0, 0, 0, 0.88);
+  -moz-box-shadow: 2px 3px 18px -6px rgba(0, 0, 0, 0.88);
+  box-shadow: 2px 3px 18px -6px rgba(0, 0, 0, 0.88);
+}
+/* ========================= Navigation End =========================== */
+
+/* ========================= Footer Strat =========================== */
+footer {
+  color: white;
+  background-color: #171613;
+  width: 100%;
+  padding: 50px 0;
+}
+
+footer .row {
+  margin: 0;
+  padding: 0;
+}
+footer .row > div {
+  padding: 2px 20px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer ul li {
+  list-style: none;
+  font-size: 16px;
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  padding: 10px 21px;
+  text-transform: capitalize;
+}
+footer p {
+  text-align: justify;
+}
+/* ========================= Footer End ============================= */
+
+/* banner */
+main {
+  z-index: 2;
+}
+
+img {
+  width: 100%;
+}
+.info {
+  padding: 100px 0;
+  background-color: #b3cfd1;
+}
+.info h4 {
+  color: #ff2020;
+  font-family: cursive;
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.info h2 {
+  font-size: 55px;
+  font-weight: 500;
+  color: #292621;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.info .btn {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+}

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+<!-- Title -->
+{% block "title" %}Home{% endblock %}
+<!-- main -->
+{% block 'mainbody' %}
+<main>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card mt-5">
+          <div class="card-header">
+            <h3 class="text-center">Register</h3>
+          </div>
+          <div class="card-body">
+            <form method="POST">
+              {% csrf_token %}
+              <div class="mb-3">
+                <label for="fullname" class="form-label">Full name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullname"
+                  placeholder="John Doe"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email2" class="form-label"
+                  >Confirm Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email2"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="********"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="password2" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password2"
+                  placeholder="********"
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="agree" />
+                <label class="form-check-label" for="agree"
+                  >I agree to the terms and conditions</label
+                >
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer text-center">
+            Already have an account?
+            <a href="{% url 'logIn' %}" class="text-decoration-none">Log in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

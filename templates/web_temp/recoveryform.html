@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+<!-- Title -->
+{% block "title" %}Home{% endblock %}
+<!-- main -->
+{% block 'mainbody' %}
+<main>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card mt-5">
+          <div class="card-header">
+            <h3 class="text-center">Reset Password</h3>
+          </div>
+          <div class="card-body">
+            <form method="POST">
+              {% csrf_token %}
+              <div class="mb-3">
+                <label for="email" class="form-label"
+                  >Enter your email address and we will send you a link to reset
+                  your password.</label
+                >
+                <input
+                  type="email"
+                  class="form-control form-control-sm mt-2"
+                  id="email"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                Send Password Reset Email
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
