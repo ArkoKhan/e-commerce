@@ -12,6 +12,11 @@
             <h3 class="text-center">Registration</h3>
           </div>
           <div class="card-body">
+            {% if messages %}
+                {% for message in messages %}
+                <p{% if message.tags %} class="{{ message.tags }} msg_warning"{% endif %}>{{ message }}</p>
+                {% endfor %}
+              {% endif %}
             <form method="POST">
               {% csrf_token %}
               <!-- <div class="mb-3">
@@ -43,12 +48,6 @@
                   name="email"
                   placeholder="name@example.com"
                 />
-                {% if messages %}
-                      {% for message in messages %}
-                      <p{% if message.tags %} class="{{ message.tags }} msg_warning"{% endif %}>{{ message }}</p>
-                      {% endfor %}
-                 
-                  {% endif %}
               </div>
               <!-- <div class="mb-3">
                 <label for="email02" class="form-label"
@@ -83,12 +82,7 @@
                   name="password1"
                   placeholder="********"
                 />
-                <!-- {% if messages %}
-                      {% for message in messages %}
-                      <p{% if message.tags %} class="{{ message.tags }} msg_warning"{% endif %}>{{ message }}</p>
-                      {% endfor %}
-                  {% endif %} -->
-                  <p class="msg"></p>
+                  <p class="msg_pass"></p>
               </div>
               <div class="mb-3 form-check">
                 <input type="checkbox" class="form-check-input" id="agree" required />
