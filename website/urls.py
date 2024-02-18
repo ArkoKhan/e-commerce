@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import *
+from .views import Home, LogInForm, Registry, RecoveryForm
 
 urlpatterns = [
     path("", Home, name="home"),
