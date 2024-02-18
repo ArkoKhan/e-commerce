@@ -15,14 +15,15 @@
             <form method="POST">
               {% csrf_token %}
               <div class="mb-3">
-                <label for="email" class="form-label"
+                <label for="e" class="form-label"
                   >Enter your email address and we will send you a link to reset
                   your password.</label
                 >
                 <input
                   type="email"
                   class="form-control form-control-sm mt-2"
-                  id="email"
+                  id="e"
+                  name="email"
                   placeholder="name@example.com"
                 />
               </div>

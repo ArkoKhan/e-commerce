@@ -144,3 +144,9 @@ img {
   text-transform: uppercase;
   font-size: 14px;
 }
+.msg_warning {
+  color: #a80606;
+}
+.msg_success {
+  color: rgb(3, 185, 3);
+}

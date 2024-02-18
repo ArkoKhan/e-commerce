@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 <!-- Title -->
-{% block "title" %}Home{% endblock %}
+{% block "title" %}Registration{% endblock %}
 <!-- main -->
 {% block 'mainbody' %}
 <main>
@@ -9,62 +9,89 @@
       <div class="col-md-6">
         <div class="card mt-5">
           <div class="card-header">
-            <h3 class="text-center">Register</h3>
+            <h3 class="text-center">Registration</h3>
           </div>
           <div class="card-body">
             <form method="POST">
               {% csrf_token %}
-              <div class="mb-3">
-                <label for="fullname" class="form-label">Full name</label>
+              <!-- <div class="mb-3">
+                <label for="fullName" class="form-label">Full name</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="fullname"
+                  id="fullName"
+                  name="fullname"
                   placeholder="John Doe"
+                /> -->
+              </div>
+              <div class="mb-3">
+                <label for="username01" class="form-label">User Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="username01"
+                  name="name"
+                  placeholder="JohnDoe"
                 />
               </div>
               <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
+                <label for="email01" class="form-label">Email address</label>
                 <input
                   type="email"
                   class="form-control"
-                  id="email"
+                  id="email01"
+                  name="email"
                   placeholder="name@example.com"
                 />
+                {% if messages %}
+                      {% for message in messages %}
+                      <p{% if message.tags %} class="{{ message.tags }} msg_warning"{% endif %}>{{ message }}</p>
+                      {% endfor %}
+                 
+                  {% endif %}
               </div>
-              <div class="mb-3">
-                <label for="email2" class="form-label"
+              <!-- <div class="mb-3">
+                <label for="email02" class="form-label"
                   >Confirm Email address</label
                 >
                 <input
                   type="email"
                   class="form-control"
-                  id="email2"
+                  id="email02"
+                  name="email1"
                   placeholder="name@example.com"
                 />
-              </div>
+              </div> -->
               <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
+                <label for="password001" class="form-label">Password</label>
                 <input
                   type="password"
                   class="form-control"
-                  id="password"
+                  id="password001"
+                  name="password"
                   placeholder="********"
                 />
               </div>
               <div class="mb-3">
-                <label for="password2" class="form-label"
+                <label for="password002" class="form-label"
                   >Confirm Password</label
                 >
                 <input
                   type="password"
                   class="form-control"
-                  id="password2"
+                  id="password002"
+                  name="password1"
                   placeholder="********"
                 />
+                {% if messages %}
+                      {% for message in messages %}
+                      <p{% if message.tags %} class="{{ message.tags }} msg_warning"{% endif %}>{{ message }}</p>
+                      {% endfor %}
+                 
+                  {% endif %}
               </div>
               <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="agree" />
+                <input type="checkbox" class="form-check-input" id="agree" required />
                 <label class="form-check-label" for="agree"
                   >I agree to the terms and conditions</label
                 >
