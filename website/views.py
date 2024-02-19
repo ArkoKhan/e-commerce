@@ -1,14 +1,17 @@
-from django.shortcuts import render , redirect
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User
 
 # Create your views here.
 
+
 def Home(request):
     return render(request, "web_temp/index.html")
 
+
 def LogInForm(request):
-    return render(request,"web_temp/loginform.html" )
+    return render(request, "web_temp/loginform.html")
+
 
 def Registry(request):
     if request.method == "POST":
@@ -17,9 +20,9 @@ def Registry(request):
         password = request.POST.get("password")
         password1 = request.POST.get("password1")
         if password == password1:
-            if User.objects.filter(username = name).exists():
+            if User.objects.filter(username=name).exists():
                 messages.warning(request, "Username already exists try another one.")
-            user = User.objects.create_user(username = name, email=email, password=password)
+            user = User.objects.create_user(username=name, email=email, password=password)
             user.set_password(password)
             user.save()
             messages.success(request, "Your account has been created successfully.")
@@ -30,9 +33,9 @@ def Registry(request):
     return render(request, "web_temp/registryfrom.html")
 
 
-
 def LogOut(request):
     return redirect("logIn")
+
 
 def RecoveryForm(request):
     return render(request, "web_temp/recoveryform.html")
