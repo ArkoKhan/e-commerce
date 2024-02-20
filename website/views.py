@@ -22,11 +22,12 @@ def Registry(request):
         if password == password1:
             if User.objects.filter(username=name).exists():
                 messages.warning(request, "Username already exists try another one.")
-            user = User.objects.create_user(username=name, email=email, password=password)
-            user.set_password(password)
-            user.save()
-            messages.success(request, "Your account has been created successfully.")
-            return redirect("logIn")
+            else:
+                user = User.objects.create_user(username=name, email=email, password=password)
+                user.set_password(password)
+                user.save()
+                messages.success(request, "Your account has been created successfully.")
+                return redirect("logIn")
         else:
             messages.warning(request, "Fix the Problems and try again.")
 
