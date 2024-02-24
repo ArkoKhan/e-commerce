@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+<!-- Title -->
+{% block "title" %}Home{% endblock %}
+<!-- main -->
+{% block 'mainbody' %}
+<main>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        {% if messages %}
+              {% for message in messages %}
+              <p{% if message.tags %} class="{{ message.tags }} msg_success"{% endif %}>{{ message }}</p>
+              {% endfor %}
+                 
+        {% endif %}
+        <h3>OTP Verification</h3>
+        <p>Please enter the 4-digit code sent to your email.</p>
+        <form method="POST">
+          {% csrf_token %}
+          <div class="input-group mb-3">
+            <input
+              type="number"
+              class="form-control"
+              id="OTP"
+              name="otp"
+              maxlength="4"
+            />
+            <button type="submit" class="btn btn-primary">Verify</button>
+          </div>
+        </form>
+        <p class="text-muted">
+          Didn't receive the code? <a href="#">Resend</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

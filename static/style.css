@@ -49,11 +49,13 @@ nav ul li {
   color: #ff1f20;
 }
 
-.btns ul {
+.btns {
   display: inline-block;
+  width: 100%;
+  /* align-content: end; */
   list-style: none;
 }
-.btns ul li {
+.btns li {
   list-style: none;
   display: inline-block;
   font-size: 16px;
@@ -63,9 +65,9 @@ nav ul li {
   text-transform: capitalize;
 }
 
-.btn-logout {
+/* .btn-logout {
   margin-left: 50px;
-}
+} */
 
 .btn {
   color: #ffffff;
@@ -153,4 +155,18 @@ img {
 }
 .msg_success {
   color: rgb(3, 185, 3);
+}
+
+/* OTP FORM */
+.input-group input {
+  width: 200px;
+  text-align: center;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.input-group input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #80bdff;
 }
