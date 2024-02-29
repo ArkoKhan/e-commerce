@@ -1,5 +1,3 @@
-// const password01 = document.querySelector("#password001");
-// const password02 = document.querySelector("#password002");
 const password = document.querySelectorAll(".pass_class");
 const msgPass = document.querySelector(".msg_pass");
 

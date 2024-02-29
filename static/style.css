@@ -170,3 +170,8 @@ img {
   box-shadow: none;
   border-color: #80bdff;
 }
+
+.new_pass {
+  width: 300px;
+  margin: 30px auto;
+}

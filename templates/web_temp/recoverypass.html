@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+<!-- Title -->
+{% block "title" %}Registration{% endblock %}
+<!-- main -->
+{% block 'mainbody' %}
+<main>
+  <!-- A form to change the password -->
+  <form method="POST" class="new_pass">
+    {% csrf_token %}
+    <!-- A form group for the new password -->
+    <div class="form-group">
+      <label for="password001">New Password</label>
+      <input
+        type="password"
+        class="form-control pass_class"
+        id="password001"
+        name="password"
+        placeholder="Enter new password"
+      />
+    </div>
+    <!-- A form group for the confirm password -->
+    <div class="form-group">
+      <label for="password002">Confirm Password</label>
+      <input
+        type="password"
+        class="form-control pass_class"
+        id="password002"
+        name="password1"
+        placeholder="Confirm new password"
+      />
+      <p class="msg_pass"></p>
+    </div>
+    <input type="hidden" name="user_id" value="{{user_id}}" />
+    <!-- A button to submit the form -->
+    <button type="submit" class="btn btn-primary">Change Password</button>
+  </form>
+</main>
+{% endblock %}
